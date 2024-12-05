@@ -1,18 +1,19 @@
-*{
+* {
   padding: 0%;
   margin: 0%;
 }
-body{
+
+body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
-.nav-bar{
+.nav-bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgba(255,255,255,255);
-  box-shadow: 0.5px 0px 5px ;
-  height: 11vh;
+  background-color: rgba(255, 255, 255, 255);
+  box-shadow: 0.5px 0px 5px;
+  height: 8vh;
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -22,128 +23,329 @@ body{
 }
 
 
-.first-nav{
-  width: 30vw;
+.first-nav {
   display: flex;
   position: relative;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
   color: rgb(19, 19, 19);
   justify-content: end;
-  
-  
+
+
 
 }
-.logo{
+
+.logo {
   width: 60px;
   border-radius: 30px;
   margin-left: 20px;
   cursor: pointer;
 }
-.golden-text{
+
+.golden-text {
   cursor: pointer;
   font-size: 18px;
 }
 
-.second-nav{
+.second-nav {
   align-content: center;
 }
-.second-nav div{
+
+.second-nav div {
   justify-self: center;
 }
-.search{
+
+.search {
   border-radius: 16px;
-  border: 0.5px solid rgb(190, 190, 190) ;
+  border: 0.5px solid rgb(190, 190, 190);
   height: 3vh;
   width: 16vw;
   outline: none;
   padding-left: 40px;
   padding-right: 20px;
-  
-}
- .search-button{
-  
-} 
 
-.third-nav{
+}
+
+.search-button {
+  position: relative;
+  left: 40px;
+  top: 7px;
+}
+
+.third-nav {
   width: 40vw;
   align-content: center;
 }
-.third-nav ul{
+
+.third-nav ul {
   list-style: none;
   display: flex;
   gap: 50px;
+  margin-left: 100px;
 }
-.third-nav li{
+
+.third-nav li {
   cursor: pointer;
 }
 
-.flowbite{
+.flowbite {
   display: none;
 }
 
-.main{
+
+.main {
   position: relative;
-  top: 100px;
+  top: 110px;
   margin-bottom: 0px;
   height: 90%;
   justify-content: center;
+justify-self: center;
 }
 
-.preface{
+.preface {
   justify-items: center;
   margin-top: 20px;
+ 
 }
-.text-preface{
+
+.text-preface {
   height: 50%;
-  width: 30vw;
+  width: 50%;
   justify-self: center;
   padding-top: 30px;
   margin-bottom: 0px;
+  font-size: 30px;
+  border: solid orangered 1px;
 }
 
-@media ( max-width: 1024px,){
 
-.first-nav{
-  width: 35vw;
+
+@media (min-width: 1024px) {
+
+  .search {
+    height: 30px;
+    width: 20vw;
+  }
+  .search-button img{
+    width: 23px;
+    position: relative;
+    left: -2px;
+    bottom: -0.5px;
+
+  }
 }
+@media (min-width: 800px) and (max-width: 1023px) {
+  
+  .third-nav{
+    display: none;
+  }
+ 
+  .search {
+    height: 30px;
+    width: 27vw;
+  }
+  .search-button img{
+    width: 20px;
+    position: relative;
+    right: 4px;
+    top: -0.5px;
+  }
   .golden-text{
-    font-size: 15px;
-   
+    font-size: 10px;
+  }
+  .flowbite{
+    display: block;
+    width: 30px;
+    align-self: center;
+    margin-right: 30px;
+    left: 180px;
+    bottom: -4px;
+    position: relative;
+
+  }
+  .text-preface {
+    width: 70%;
+  }
+}
+@media (min-width: 700px) and (max-width: 800px) {
+  .third-nav{
+    display: none;
+  }
+  .search {
+    height: 30px;
+    width: 27vw;
+  }
+  .search-button img{
+    width: 20px;
+    position: relative;
+    right: 4px;
+    top: -0.5px;
+  }
+  .golden-text{
+    font-size: 10px;
+  }
+  .flowbite{
+    display: block;
+    width: 30px;
+    align-self: center;
+    margin-right: 30px;
+    left: 170px;
+    bottom: -3px;
+    position: relative;
+
+  }
+  .text-preface {
+    width: 70%;
+  }
+}
+@media (min-width: 600px) and (max-width: 700px) {
+  .third-nav{
+    display: none;
+  }
+  .search {
+    height: 30px;
+    width: 27vw;
+  }
+  .search-button img{
+    width: 20px;
+    position: relative;
+    right: 4px;
+    top: -0.5px;
+  }
+  .golden-text{
+    font-size: 10px;
+  }
+  .flowbite{
+    display: block;
+    width: 30px;
+    align-self: center;
+    margin-right: 30px;
+    left: 150px;
+    bottom: -4px;
+    position: relative;
+
+  }
+  .text-preface {
+    width: 70%;
+  }
+
+}
+ @media (min-width: 400px) and (max-width: 500px) {
+  .first-nav{
+    width: 250px;
+  }
+   .third-nav{
+      display: none;
+    }
+   .search{
+      display: none;
+    }
+   .golden-text{
+      font-size: 13px ;
+    }
+  .logo{
+      width: 50px;
+    }
+    .main{
+      position: relative;
+      top: 70px;
+    }
+
+  .search-button img{
+    width: 20px;
+    position: relative;
+    bottom: 3px;
+  }
+  .flowbite{
+    display: block;
+    width: 25px;
+    align-self: center;
+    margin-right: 30px;
+    left: 50%;
+    position: relative;
+    bottom: -1px;
+  }
+  .text-preface {
+    width: 80%;
+  }
+}
+@media (min-width: 500px) and (max-width: 600px) {
+  .first-nav{
+    width: 250px;
+  }
+   .third-nav{
+      display: none;
+    }
+   .search{
+      display: none;
+    }
+   .golden-text{
+      font-size: 13px ;
+    }
+  .logo{
+      width: 50px;
+    }
+
+  .search-button img{
+    width: 20px;
+    position: relative;
+    bottom: 3px;
+  }
+  .flowbite{
+    display: block;
+    width: 25px;
+    align-self: center;
+    margin-right: 30px;
+    left: 60%;
+    position: relative;
+    bottom: -1px;
+
+  }
+  .main{
+    position: relative;
+    top: 70px;
+  }
+  .text-preface {
+    width: 80%;
+  }
+}
+@media (max-width: 400px) {
+  .first-nav{
+    width: 200px;
+  }
+  .logo{
+    width: 40px;
+  }
+  .golden-text{
+    font-size: 10px;
   }
   .third-nav{
     display: none;
   }
-
+  .search{
+    display: none;
+  }
+  .search-button img{
+    width: 14px;
+    position: relative;
+    top: -5px;
+    right: 20px;
+  }
   .flowbite{
     display: block;
-    width: 35px;
+    width: 20px;
     align-self: center;
     margin-right: 30px;
-    left: 180px;  
+    left: 40%;
     position: relative;
+    bottom: -1.3px;
   }
-  .second-nav{
-    margin-left: 70px;
-  }
-  .search{
-    height: 2.6vh;
-    width: 27vw; 
+  .main{
     position: relative;
-    bottom: 12px;
+    top: 70px;
   }
-  .search-button{
-    position: relative;
-    top: 20px;
-    left: 5px;
-    z-index: 999;
+  .text-preface {
+    width: 80%;
   }
   
-}
-
-
-  
-
-
-
 }
